@@ -1,14 +1,13 @@
 <?php
 /**
-*
-* tpotm 1.0.3 [Arabic]
-*
-* @package phpBB Extension - tpotm 1.0.3-(Top Poster Of The Month)
-* @copyright (c) 2005 - 2008 - 2016 3Di (Marco T.)
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
-*
-* Translated By : Bassel Taha Alhitary - www.alhitary.net
-*/
+ *
+ * Top Poster Of The Month. An extension for the phpBB Forum Software package.
+ *
+ * @copyright (c) 2005,2017, 3Di
+ * @license GNU General Public License, version 2 (GPL-2.0)
+ *
+ * Translated By : Bassel Taha Alhitary <http://alhitary.net>
+ */
 
 /**
 * DO NOT CHANGE
@@ -20,7 +19,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -35,18 +34,52 @@ if (empty($lang) || !is_array($lang))
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
-$lang = array_merge($lang, array(
-	'TPOTM_CAT'				=> 'أنشط الأعضاء لهذا الشهر',
-	'TPOTM_NOW'				=> 'أكثر الأعضاء مُشاركة لهذا الشهر هو ',
-	'TPOTM_NOBODY'			=> 'لا يوجد حالياً ,',
+$lang = array_merge($lang, [
+	'TPOTM_CAT'						=> 'أنشط الأعضاء لهذا الشهر',
+	'TPOTM_EVER_CAT'				=> 'أنشط الأعضاء سابقاً',
+	'TPOTM_NOW'						=> 'أكثر الأعضاء مُشاركة لهذا الشهر هو ',
+	'TPOTM_NOBODY'					=> 'لا يوجد حالياً ',
+	'TPOTM_BADGE'					=> 'صورة الكأس ?',
+	'TPOTM_BADGE_MINIPROFILE'		=> 'أنشط الأعضاء لهذا الشهر',
+	'TOTAL_MONTH'					=> ' من أصل <strong>%1s</strong> (%2s%%)',
+	'TPOTM_EXPLAIN'					=> 'من %1s إلى %2s',
+	'TPOTM_NO_EXPLAIN'				=> 'خلال الشهر الحالي',
+	'TPOTM_TOT_POST'				=> 'إجمالي المشاركات',
+	'TPOTM_DATE'					=> 'السنة والشهر',
+	'TPOTM_LAST_POST_IN_MONTH'		=> 'آخر مشاركة في ',
 
-	'TPOTM_CACHE'	=> array(
-		1	=> ' (<i>التحديث كل <strong>%d</strong> دقيقة</i>)',
-		2	=> ' (<i>التحديث كل <strong>%d</strong> دقائق</i>)',
-	),
+	'TPOTM_CACHE'	=> [
+		0	=> ' <i>[التحديث عند كل تحميل للصفحة]</i>',
+		1	=> ' <i>[التحديث كل <strong>%d</strong> دقيقة]</i>',
+		2	=> ' <i>[التحديث كل <strong>%d</strong> دقائق]</i>',
+	],
 
-	'TPOTM_POST'	=> array(
+	'TPOTM_POST'	=> [
 		1	=> ' بإجمالي <strong>%d</strong> مُشاركة',
 		2	=> ' بإجمالي <strong>%d</strong> مشاركات',
-	),
-));
+	],
+
+	// Translators please do not change the following line, no need to translate it!
+	'TPOTM_CREDIT_LINE'		=>	' | <a href="https://github.com/3D-I/tpotm">أنشط الأعضاء لهذا الشهر</a> &copy; 2005, 2018 - 3Di',
+
+	// Hall of fame
+	'VIEWING_TPOTM_HALL'			=> 'يُشاهد قاعة المُمَيَّزين',
+	'TPOTM_PAGE'					=> 'قاعة المُمَيَّزين',
+	'TPOTM_HELLO'					=> 'أنشط الأعضاء لهذا الشهر - قاعة المُمَيَّزين',
+	'TPOTM_EXPLAIN_HALL'			=> 'من %1s إلى %2s',
+	'TPOTM_HALL_NO_EXPLAIN'			=> 'منذ تاريخ قديم حتى نهاية الشهر السابق',
+
+	'HALL_OF_FAME'	=> [
+		0	=> 'قاعة المُمَيَّزين',
+		1	=> 'قاعة المُمَيَّزين &bull; صفحة %d',
+		2	=> 'قاعة المُمَيَّزين &bull; صفحة %d',
+	],
+
+	'TPOTM_HALL_COUNT'	=> [
+		1	=> ' تم العثور على إجمالي <strong>%d</strong> أنشط عضو مشارك',
+		2	=> ' تم العثور على إجمالي <strong>%d</strong> أنشط أعضاء مشاركين',
+	],
+
+	'NOT_AUTHORISED_TPOTM__HALL'	=> 'ليس لديك الصلاحية لمشاهدة قاعة المُمَيَّزين لأنشط الأعضاء لهذا الشهر.',
+	'TPOTM__HALL_DISABLED'			=> 'تم تعطيل قاعة المُمَيَّزين لأنشط الأعضاء لهذا الشهر.',
+]);
